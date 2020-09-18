@@ -23,8 +23,8 @@ def InteresSimple(interes, tiempo):
 def CambioTasaEfec(interes, pNuevo):
     if isinstance(interes, str):
         interes = symbols('interes')
-    elif isinstance(tiempo, str):
-        tiempo = symbols('tiempo')
+    elif isinstance(pNuevo, str):
+        pNuevo = symbols('pNuevo')
     interes = interes/100
     fin = (1+interes)**pNuevo
     fin = (fin-1)/100
