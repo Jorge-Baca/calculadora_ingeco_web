@@ -75,7 +75,6 @@ pyRFC3339==1.1
 pyrsistent==0.15.5
 python-dateutil==2.7.3
 python-decouple==3.3
-python-xlib==0.23
 pytz==2019.3
 pyxdg==0.26
 PyYAML==5.3.1
@@ -85,7 +84,6 @@ requests==2.22.0
 requests-unixsocket==0.2.0
 SecretStorage==2.3.1
 Send2Trash==1.5.0
-sessioninstaller==0.0.0
 setproctitle==1.1.10
 simplejson==3.16.0
 six==1.14.0
