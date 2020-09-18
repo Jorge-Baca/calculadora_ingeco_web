@@ -10,7 +10,6 @@ Click==7.0
 colorama==0.4.3
 configobj==5.0.6
 cryptography==2.8
-dbus-python==1.2.16
 decorator==4.4.2
 defusedxml==0.6.0
 distro==1.4.0
@@ -64,8 +63,6 @@ pycrypto==2.6.1
 pycups==1.9.73
 pycurl==7.43.0.2
 Pygments==2.3.1
-PyGObject==3.36.0
-PyICU==2.4.2
 pyinotify==0.9.6
 PyJWT==1.7.1
 pymacaroons==0.13.0
