@@ -9,17 +9,19 @@ class Controller():
     def solucionador(self, req):
         sol = self.transformador(req)
         x = sy.symbols('x')
+        
         try:
             exec('global x; global sol; ' + sol, globals())
             sol = globals()['sol']
         except:
             sol = 'Syntax Error'
-
         if(isinstance(sol,float) | isinstance(sol,str)):
             return sol
-
-        if(isinstance(sol[0],list)):
-            return self.redondear(sol)
+        try:
+            if(isinstance(sol[0],list)):
+                return self.redondear(sol)
+        except:
+            return sol
         return sol[0]
 
     def transformador(self,req):
@@ -36,8 +38,7 @@ class Controller():
         return sol
 
     def redondear(self,mat):
-        try:
-            for i in range(1, len(mat)):
-                for j in range(0, len(mat[i])):
-                    mat[i][j] = round(mat[i][j],2)
+        for i in range(1, len(mat)):
+            for j in range(0, len(mat[i])):
+                mat[i][j] = round(mat[i][j],2)
         return mat
