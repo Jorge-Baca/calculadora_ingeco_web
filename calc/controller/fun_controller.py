@@ -17,7 +17,7 @@ class Controller():
 
         if(isinstance(sol,float) | isinstance(sol,str)):
             return sol
-        
+
         if(isinstance(sol[0],list)):
             return self.redondear(sol)
         return sol[0]
@@ -36,7 +36,8 @@ class Controller():
         return sol
 
     def redondear(self,mat):
-        for i in range(1, len(mat)):
-            for j in range(0, len(mat[i])):
-                mat[i][j] = round(mat[i][j],2)
+        try:
+            for i in range(1, len(mat)):
+                for j in range(0, len(mat[i])):
+                    mat[i][j] = round(mat[i][j],2)
         return mat
