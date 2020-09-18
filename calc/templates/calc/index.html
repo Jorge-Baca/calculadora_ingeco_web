@@ -1,0 +1,102 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Etiqueta para adaptar a @media -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static 'calc/stylesheet.css' %}"><!-- Enlace hoja estilos -->
+</head>
+<body>
+  	<div name="calculator" id="calculator">
+		<div class="ingeco" id="ingeco">
+			<button id="bar_button">///</button>
+			<div id="bar" style="display: none">
+				<ul name="funciones" id="funciones">
+					<li>
+						<span id="factores"> Funciones factores </span>
+						<div id="container_factores">
+							<ul id="f_factores">
+								<li> InteresSimple </li>
+								<li> CambioTasaEfec </li>
+								<li> FDP </li>
+								<li> PDF </li>
+								<li> FDA </li>
+								<li> PDA </li>
+								<li> FDG </li>
+								<li> PDG </li>
+								<li> PDAG </li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<span  id="tipo_cambio"> Funciones tipoCambio </span>
+						<div id="container_tipo_cambio">
+							<ul id="f_tipo_cambio">
+								<li> devaluacion </li>
+								<li> tipoCambio </li>
+								<li> tipoCambioPeriodos </li>
+								<li> intSolesConst </li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<span id="bonos"> Funciones bonos </span>
+						<div id="container_bonos">
+							<ul id="f_bonos">
+								<li> valorCupon </li>
+								<li> calendarioBono </li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<span id="calendarios"> Funciones calendarios </span>
+						<div id="container_calendarios">
+							<ul id="f_calendarios">
+								<li> intEfecAdel </li>
+								<li> cuotasConst </li>
+								<li> amortizacionConst </li>
+								<li> cuotaCreciente </li>
+								<li> periodosGracia </li>
+								<li> periodoGraciaTotal </li>
+								<li> intAdelCuotas </li>
+								<li> intAdelAmortizado </li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<form>
+	    	<input type="textfield" name="ans" value="{{ ans }}" id="rspt" method="post">
+		</form>
+		<div id="box">
+			<input type="button" value="%" onClick="add('%')">
+			<input type="button" value="CE" onClick="limpia()">
+			<input type="button" value="C" onClick="quita()">
+			<input type="button" value="<-" onClick="quita()">
+			<input type="button" value="1/x" onClick="inversa()">
+			<input type="button" value="x^2" onClick="cuadrado()">
+			<input type="button" value="x^0.5" onClick="raiz()">
+			<input type="button" value="/" onClick="add('/')">
+			<input type="button" value="7" onClick="add('7')">
+			<input type="button" value="8" onClick="add('8')">
+			<input type="button" value="9" onClick="add('9')">
+			<input type="button" value="*" onClick="add('*')">
+			<input type="button" value="4" onClick="add('4')">
+			<input type="button" value="5" onClick="add('5')">
+			<input type="button" value="6" onClick="add('6')">
+			<input type="button" value="-" onClick="add('-')">
+		    <input type="button" value="1" onClick="add('1')">
+		    <input type="button" value="2" onClick="add('2')">
+		    <input type="button" value="3" onClick="add('3')">
+		    <input type="button" value="+" onClick="add('+')">
+			<input type="button" value="+/-" onClick="invierte()">
+		    <input type="button" value="0" onClick="add('0')">
+			<input type="button" value="." onClick="add('.')">
+		    <input type="button" value="=" onClick="add('=')">
+		</div>
+	</div>
+</body>
+<script src="{% static 'calc/calculadora.js' %}"></script>
+</html>

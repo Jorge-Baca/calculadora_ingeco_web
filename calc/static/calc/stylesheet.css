@@ -1,0 +1,80 @@
+#calculator {
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  border: solid 1px #c2c2c2;
+  padding: 2px 2px 2px 2px;
+  margin: auto;
+  background: #fafafa;
+}
+
+#box{
+    display: grid;
+    grid-template-columns: [inicial] repeat(4, 1fr) [final];
+    grid-template-rows: [inicial] repeat(6, 1fr) [final];
+    border-color: rgba(255,255,255,1);
+}
+
+div.ingeco{
+    position: static;
+}
+
+div.ingeco button{
+    position: relative;
+    margin-top: 10px;
+    margin-right: 85%;
+}
+
+input[type=textfield] {
+    width: 75%;
+    padding: 16px 32px;
+    font-size: 16px;
+    margin: 8px 0;
+    border: 1px solid silver;
+    border-radius: 1px;
+    text-align: right;
+    color: #333;
+}
+
+input[type=button], input[type=submit]{
+    background-color: #4dc3ff;/*#0080FF;/*#4CAF50;*/
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    font-size: 16px;
+    min-width: 21%;
+    text-decoration: none;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+  background-color: #333;
+}
+
+#bar::-webkit-scrollbar{
+	display: none;
+}
+
+#bar{
+	position: fixed;
+    width: 225px;
+	height: 435px;
+    display: none;
+	z-index: 101;
+	background-color: #fafafa;
+	overflow-y: scroll;
+}
+
+#f_factores, #f_tipo_cambio, #f_bonos, #f_calendarios{
+	display: none;
+}
+
+ul{
+    display: block;
+}
+
+li{
+	margin-top: 10px;
+    text-align: left;
+    list-style: none;
+}
