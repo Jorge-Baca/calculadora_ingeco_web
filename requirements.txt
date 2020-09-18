@@ -90,15 +90,12 @@ six==1.14.0
 soupsieve==1.9.5
 sqlparse==0.3.1
 sympy==1.6.2
-system-service==0.3
 systemd-python==234
 terminado==0.8.2
 testpath==0.4.4
 tinycss2==1.0.2
 tornado==5.1.1
 traitlets==4.3.3
-ubuntu-advantage-tools==20.3
-ubuntu-drivers-common==0.0.0
 ufw==0.36
 Unidecode==1.1.1
 urllib3==1.25.8
