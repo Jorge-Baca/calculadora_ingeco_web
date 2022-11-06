@@ -37,23 +37,20 @@ def cuotasConst(monto, interes, tiempo):
     interes = interes/100
     sdi = monto
     mat = []
-    mat.append(["Saldo inicial", "Intereses", "Cuota", "Saldo Final"])
+    mat.append(["Saldo inicial", "Amortizacion", "Intereses", "Cuota", "Saldo Final"])
 
     for i in range(1,tiempo+1):
         mat.append([])
-        mat[i].append(sdi)
         intereses = sdi*interes
         amortiz = cuota-intereses
-        mat[i].append(amortiz)
-        mat[i].append(intereses)
-        mat[i].append(cuota)
         sdf = sdi-amortiz
-        mat[i].append(sdf)
+        mat[i].extend([sdi,amortiz,intereses, cuota,sdf])
         sdi = sdf
         total_amort = total_amort + amortiz
         total_int = total_int + intereses
         total_cuot = total_cuot + cuota
-
+        
+    mat.append(["Saldo inicial restante", "Amortizacion Total", "Intereses totales", "Cuota Total", "Saldo Final"])
     mat.append([0, total_amort, total_int, total_cuot, 0])
     return mat
 
